@@ -212,11 +212,12 @@ const Navbar = () => {
         </nav>
 
         {/* 🔥 RIGHT */}
-        <NavLink to="/" className="flex items-center gap-2">
-          <img src={logo} className="w-10 h-10 rounded-full" />
-          <span className="hidden sm:block font-semibold">
-            الجمعية الاقتصادية
-          </span>
+        <NavLink to="/" className=" text-accent flex items-center gap-2">
+          <img src={logo} className="w-16 h-auto rounded-full" />
+          <div className='flex flex-col items-center'>
+          <strong className="hidden  sm:block font-extrabold "> جمعية العلوم الاقتصادية السورية</strong>
+          <strong className="hidden font-normal sm:block  text-[11px] ">Syrian Economic Sciences Society</strong>
+        </div>
         </NavLink>
 
         {/* 📱 Mobile */}

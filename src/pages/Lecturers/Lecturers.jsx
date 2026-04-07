@@ -42,23 +42,23 @@ const Lecturers = () => {
   }
 
   return (
-    <section className="py-10 px-4 sm:px-6 lg:px-8 space-y-10" dir="rtl">
+    <section className="py-5 px-4 sm:px-6 lg:px-8 space-y-5" dir="rtl">
       {/*  */}
       
 
       {/* Header+زر الرجوع */}
-      <div className='flex justify-start items-baseline gap-6'>
-      <BackButton />
+      <div className='flex justify-between items-end gap-4'>
+<div className="w-full">
       <SectionHeader
         eyebrow="المحاضرون"
-        title="قائمة المحاضرين"
-        description="اضغط على اسم المحاضر لعرض جميع محاضراته مع الفلترة التلقائية."
-      />
-</div>
-      {/* البحث */}
-      <div className="max-w-md">
+        title="قائمة المحاضرين"/>
+        </div>
+              <div className="w-full">
         <SearchInput value={search} onChange={setSearch} />
       </div>
+</div>
+      {/* البحث */}
+
 
       {/* قائمة المحاضرين مع Staggered Animation */}
       <motion.div

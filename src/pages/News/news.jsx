@@ -46,21 +46,15 @@ const News= () => {
   ))
 
   return (
-    <section className="space-y-8 py-10 px-4 max-w-7xl mx-auto">
+    <section className="space-y-5 py-5 px-4 max-w-7xl mx-auto">
       <SectionHeader
         eyebrow="أخبار الجمعية"
-        title="آخر الأخبار"
-        description="تابع آخر الأخبار"
+        title="الأخبار"
       />
 
       {/* filters */}
-      <div className="flex flex-col sm:flex-row gap-4">
-        <SearchInput
-          value={filters.search}
-          onChange={value =>
-            dispatch(setFilter({ key: 'search', value }))
-          }
-        />
+      <div className="flex justify-between items-end sm:flex-row gap-4">
+
 
         <SelectFilter
           label="نوع الخبر"
@@ -79,6 +73,14 @@ const News= () => {
             dispatch(setFilter({ key: 'year', value }))
           }
         />
+        <div className="w-full">
+                <SearchInput
+          value={filters.search}
+          onChange={value =>
+            dispatch(setFilter({ key: 'search', value }))
+          }
+        />
+        </div>
       </div>
 
       <InfiniteScrollFeed items={itemsToRender} perPage={6} />

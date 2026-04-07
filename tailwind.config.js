@@ -1,5 +1,5 @@
 export default {
-  content: ['./index.html', './src/**/*.{js,jsx,ts,tsx}'],
+  content: ["./index.html", "./src/**/*.{js,jsx,ts,tsx}"],
 
   theme: {
     extend: {
@@ -17,7 +17,6 @@ export default {
 
         accentSoft: "rgb(7 205 205)",
         accentSoftBg: "#84feff66",
-  
       },
 
       boxShadow: {
@@ -38,6 +37,15 @@ export default {
 
       transitionTimingFunction: {
         smooth: "cubic-bezier(0.4, 0, 0.2, 1)",
+      },
+      keyframes: {
+        fadeUp: {
+          "0%": { opacity: 0, transform: "translateY(40px)" },
+          "100%": { opacity: 1, transform: "translateY(0)" },
+        },
+      },
+      animation: {
+        fadeUp: "fadeUp 0.8s ease forwards",
       },
     },
   },

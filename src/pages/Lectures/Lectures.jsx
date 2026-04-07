@@ -55,22 +55,12 @@ useEffect(() => {
   }
 
   return (
-    <section className="space-y-10 py-10">
+    <section className="space-y-5 py-5">
       <SectionHeader
         eyebrow="المحاضرات"
         title="قائمة المحاضرات"
-        description="ابحث أو استخدم الفلاتر لمراجعة المحاضرات."
-        meta={
-          search || selectedSpeaker || selectedYear || selectedSubCategory || selectedMainCategory
-            ? 'الفلاتر الحالية مفعلّة'
-            : 'عرض جميع المحاضرات بدون فلترة'
-        }
       />
 
-      {/* صندوق البحث */}
-      <div className="w-full mb-6">
-        <SearchInput value={search} onChange={setSearch} />
-      </div>
 
       {/* الفلاتر في Grid responsive */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
@@ -88,11 +78,19 @@ useEffect(() => {
 
       {/* قائمة المحاضرات مع Pagination و framer-motion */}
       <div className="space-y-6">
-        <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-          <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-slate-500">المحاضرات</p>
+
+
+
+        <div className="flex gap-3 justify-around sm:flex-row sm:items-center sm:justify-between">
+          <div className='w-full'>
+            <p className="text-sm font-semibold  tracking-[0.3em] text-slate-500">المحاضرات</p>
             <h2 className="text-2xl font-semibold text-slate-900">{filteredLectures.length} محاضرة</h2>
           </div>
+          
+      {/* صندوق البحث */}
+      <div className="w-full">
+        <SearchInput value={search} onChange={setSearch} />
+      </div>
         </div>
 
         <Pagination

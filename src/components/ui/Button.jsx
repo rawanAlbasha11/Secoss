@@ -3,7 +3,8 @@ import { Link as RouterLink } from 'react-router-dom'
 const variantStyles = {
   primary: 'bg-slate-900 text-white hover:bg-slate-800',
   secondary: 'border border-slate-300 bg-slate-50 text-slate-700 hover:bg-slate-100',
-  accent: 'bg-emerald-600 text-white hover:bg-emerald-500',
+   accent: 'bg-accent text-white',
+  accentSoft: 'bg-accentSoftBg text-accentSoft',
 }
 
 const Button = ({ children, to, href, variant = 'primary', className = '', ...props }) => {
